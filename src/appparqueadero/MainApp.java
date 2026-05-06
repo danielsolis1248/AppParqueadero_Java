@@ -8,7 +8,7 @@ package appparqueadero;
  *
  * @author Admin
  */
-public class AppParqueadero {
+public class MainApp {
 
     /**
      * @param args the command line arguments
