@@ -38,7 +38,8 @@ public class InicioApp extends javax.swing.JFrame {
         jLabel_SubtituloApp = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(800, 480));
+        setMinimumSize(new java.awt.Dimension(700, 480));
+        setPreferredSize(new java.awt.Dimension(700, 480));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel_Inicio.setBackground(new java.awt.Color(0, 83, 103));
