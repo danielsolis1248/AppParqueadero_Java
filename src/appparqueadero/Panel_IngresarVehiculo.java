@@ -38,57 +38,55 @@ public class Panel_IngresarVehiculo extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
 
-        setBackground(new java.awt.Color(241, 241, 241));
-        setMinimumSize(new java.awt.Dimension(400, 480));
-        setPreferredSize(new java.awt.Dimension(400, 480));
+        setMinimumSize(new java.awt.Dimension(420, 310));
+        setPreferredSize(new java.awt.Dimension(420, 310));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 83, 103));
         jLabel2.setText("Tipo de vehiculo:");
         jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 140, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 150, -1));
 
         jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jTextField1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 200, 30));
+        add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 200, 30));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 83, 103));
         jLabel3.setText("Placa:");
         jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 60, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, 60, -1));
 
         jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jTextField2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 200, 30));
+        add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 200, 30));
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 83, 103));
         jLabel4.setText("Propietario:");
         jLabel4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 100, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 120, -1));
 
-        jRadioButton1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jRadioButton1.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
         jRadioButton1.setForeground(new java.awt.Color(0, 102, 102));
         jRadioButton1.setText("Auto");
         jRadioButton1.addActionListener(this::jRadioButton1ActionPerformed);
-        add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, -1, 20));
+        add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, -1, 20));
 
-        jRadioButton2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jRadioButton2.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
         jRadioButton2.setForeground(new java.awt.Color(0, 102, 102));
         jRadioButton2.setText("Motocicleta");
         jRadioButton2.addActionListener(this::jRadioButton2ActionPerformed);
-        add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 110, 20));
+        add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, 120, 20));
 
         button1.setBackground(new java.awt.Color(15, 102, 126));
         button1.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         button1.setForeground(new java.awt.Color(255, 255, 255));
         button1.setLabel("Registrar");
         button1.addActionListener(this::button1ActionPerformed);
-        add(button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 420, 120, 40));
+        add(button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 250, 120, 40));
 
         jPanel1.setBackground(new java.awt.Color(0, 83, 103));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -101,10 +99,9 @@ public class Panel_IngresarVehiculo extends javax.swing.JPanel {
         jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Ingresar vehiculos");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, -1, 30));
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 50));
-        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 290, 130, 100));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 50));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
@@ -129,7 +126,6 @@ public class Panel_IngresarVehiculo extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JTextField jTextField1;
