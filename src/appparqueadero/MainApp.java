@@ -4,17 +4,17 @@
  */
 package appparqueadero;
 
-/**
- *
- * @author Admin
- */
-public class MainApp {
+import javax.swing.SwingUtilities;
 
-    /**
-     * @param args the command line arguments
-     */
+public class MainApp {
+ 
+
     public static void main(String[] args) {
-        // TODO code application logic here
+        SwingUtilities.invokeLater(() -> {
+            InicioApp inicio = new InicioApp();
+            inicio.setVisible(true);
+        });
+        
     }
     
 }

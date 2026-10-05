@@ -86,7 +86,7 @@ public class Panel_ListaVehiculos extends javax.swing.JPanel {
         jLabel4.setForeground(new java.awt.Color(0, 83, 103));
         jLabel4.setText("Tipo de vehiculo:");
         jLabel4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 160, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 160, -1));
 
         jTextField3.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         jTextField3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -113,33 +113,32 @@ public class Panel_ListaVehiculos extends javax.swing.JPanel {
         jRadioButton2.setForeground(new java.awt.Color(0, 102, 102));
         jRadioButton2.setText("Auto");
         jRadioButton2.addActionListener(this::jRadioButton2ActionPerformed);
-        add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, -1, 20));
+        add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, -1, 20));
 
         jRadioButton3.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
         jRadioButton3.setForeground(new java.awt.Color(0, 102, 102));
         jRadioButton3.setText("Motocicleta");
         jRadioButton3.addActionListener(this::jRadioButton3ActionPerformed);
-        add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, 120, 20));
+        add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 120, 20));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 83, 103));
         jLabel8.setText("Ubicación del vehiculo:");
         jLabel8.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, 200, -1));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 130, 200, -1));
 
         jRadioButton4.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
         jRadioButton4.setForeground(new java.awt.Color(0, 102, 102));
         jRadioButton4.setText("Dentro");
         jRadioButton4.addActionListener(this::jRadioButton4ActionPerformed);
-        add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 160, 90, 20));
+        add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, 90, 20));
 
         jRadioButton5.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
         jRadioButton5.setForeground(new java.awt.Color(0, 102, 102));
         jRadioButton5.setText("Fuera");
         jRadioButton5.addActionListener(this::jRadioButton5ActionPerformed);
-        add(jRadioButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, 80, 20));
+        add(jRadioButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 160, 80, 20));
 
-        jTable1.setBackground(new java.awt.Color(204, 255, 255));
         jTable1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

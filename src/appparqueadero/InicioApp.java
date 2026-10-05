@@ -4,6 +4,8 @@
  */
 package appparqueadero;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author Admin
@@ -12,11 +14,39 @@ public class InicioApp extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(InicioApp.class.getName());
 
-    /**
-     * Creates new form Principal
-     */
+    //Declaramos las variables de los paneles
+    Panel_IngresarVehiculo panel_IngresarVehiculo;
+    Panel_RetirarVehiculo panel_RetirarVehiculo;
+    Panel_ListaVehiculos panel_ListaVehiculos;
+    
     public InicioApp() {
+        
         initComponents();
+        setSize(700, 480);
+        setLayout(null);
+   
+        //Configuración de la navegacion de los paneles de la app
+        
+        //Ingresar vehiculo
+        panel_IngresarVehiculo = new Panel_IngresarVehiculo();
+        panel_IngresarVehiculo.setBounds(340, 0, 350, 308);
+        add(panel_IngresarVehiculo);
+        
+        //Retirar vehiculo
+        panel_RetirarVehiculo = new Panel_RetirarVehiculo();
+        panel_RetirarVehiculo.setBounds(300, 0, 473, 400);
+        add(panel_RetirarVehiculo);
+        panel_RetirarVehiculo.setVisible(false);
+        
+        //Lista de vehiculos
+        panel_ListaVehiculos = new Panel_ListaVehiculos();
+        panel_ListaVehiculos.setBounds(350, 0, 1116, 400);
+        add(panel_ListaVehiculos);
+        panel_ListaVehiculos.setVisible(false);
+        
+        //Centrar ventana
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     /**
@@ -38,6 +68,7 @@ public class InicioApp extends javax.swing.JFrame {
         jLabel_SubtituloApp = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(700, 480));
         setMinimumSize(new java.awt.Dimension(700, 480));
         setPreferredSize(new java.awt.Dimension(700, 480));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -67,18 +98,21 @@ public class InicioApp extends javax.swing.JFrame {
         button_RetVehiculo.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         button_RetVehiculo.setForeground(new java.awt.Color(255, 255, 255));
         button_RetVehiculo.setLabel("Retirar vehiculo");
+        button_RetVehiculo.addActionListener(this::button_RetVehiculoActionPerformed);
         jPanel_Inicio.add(button_RetVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, 140, 50));
 
         button_ListVehiculos.setBackground(new java.awt.Color(0, 153, 153));
         button_ListVehiculos.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
         button_ListVehiculos.setForeground(new java.awt.Color(255, 255, 255));
         button_ListVehiculos.setLabel("Lista de vehiculos");
+        button_ListVehiculos.addActionListener(this::button_ListVehiculosActionPerformed);
         jPanel_Inicio.add(button_ListVehiculos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 140, 50));
 
         button_Salir.setBackground(new java.awt.Color(255, 51, 51));
         button_Salir.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         button_Salir.setForeground(new java.awt.Color(255, 255, 255));
         button_Salir.setLabel("Salir");
+        button_Salir.addActionListener(this::button_SalirActionPerformed);
         jPanel_Inicio.add(button_Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, 140, 50));
 
         jLabel_SubtituloApp.setFont(new java.awt.Font("Segoe UI Semibold", 2, 16)); // NOI18N
@@ -92,8 +126,40 @@ public class InicioApp extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void button_IngrVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_IngrVehiculoActionPerformed
-        // TODO add your handling code here:
+        setSize(800, 450);
+        panel_IngresarVehiculo.setVisible(true);
+        panel_RetirarVehiculo.setVisible(false);
+        panel_ListaVehiculos.setVisible(false);
+        
+        revalidate();
+        repaint();
     }//GEN-LAST:event_button_IngrVehiculoActionPerformed
+
+    private void button_RetVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_RetVehiculoActionPerformed
+        setSize(800, 450);
+        panel_IngresarVehiculo.setVisible(false);
+        panel_RetirarVehiculo.setVisible(true);
+        panel_ListaVehiculos.setVisible(false);
+        
+        revalidate();
+        repaint();
+    }//GEN-LAST:event_button_RetVehiculoActionPerformed
+
+    private void button_ListVehiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_ListVehiculosActionPerformed
+        setSize(1116, 450);
+        add(panel_ListaVehiculos);
+        panel_IngresarVehiculo.setVisible(false);
+        panel_RetirarVehiculo.setVisible(false);
+        panel_ListaVehiculos.setVisible(true);
+        
+        revalidate();
+        repaint();
+        
+    }//GEN-LAST:event_button_ListVehiculosActionPerformed
+
+    private void button_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_SalirActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_button_SalirActionPerformed
 
     /**
      * @param args the command line arguments
