@@ -22,25 +22,25 @@ public class InicioApp extends javax.swing.JFrame {
     public InicioApp() {
         
         initComponents();
-        setSize(700, 480);
+        setSize(975, 520);
         setLayout(null);
    
         //Configuración de la navegacion de los paneles de la app
         
         //Ingresar vehiculo
         panel_IngresarVehiculo = new Panel_IngresarVehiculo();
-        panel_IngresarVehiculo.setBounds(340, 0, 350, 308);
+        panel_IngresarVehiculo.setBounds(340, 0, 620, 240);
         add(panel_IngresarVehiculo);
         
         //Retirar vehiculo
         panel_RetirarVehiculo = new Panel_RetirarVehiculo();
-        panel_RetirarVehiculo.setBounds(300, 0, 473, 400);
+        panel_RetirarVehiculo.setBounds(340, 0, 620, 480);
         add(panel_RetirarVehiculo);
         panel_RetirarVehiculo.setVisible(false);
         
         //Lista de vehiculos
         panel_ListaVehiculos = new Panel_ListaVehiculos();
-        panel_ListaVehiculos.setBounds(350, 0, 1116, 400);
+        panel_ListaVehiculos.setBounds(340, 0, 620, 480);
         add(panel_ListaVehiculos);
         panel_ListaVehiculos.setVisible(false);
         
@@ -66,11 +66,13 @@ public class InicioApp extends javax.swing.JFrame {
         button_ListVehiculos = new java.awt.Button();
         button_Salir = new java.awt.Button();
         jLabel_SubtituloApp = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(700, 480));
-        setMinimumSize(new java.awt.Dimension(700, 480));
-        setPreferredSize(new java.awt.Dimension(700, 480));
+        setMaximumSize(new java.awt.Dimension(960, 520));
+        setMinimumSize(new java.awt.Dimension(960, 520));
+        setPreferredSize(new java.awt.Dimension(960, 520));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel_Inicio.setBackground(new java.awt.Color(0, 83, 103));
@@ -85,7 +87,7 @@ public class InicioApp extends javax.swing.JFrame {
         jPanel_Inicio.add(jLabel_NombreApp, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, -1, -1));
 
         jLabel_LogoApp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/appparqueadero/Imagenes/Logo auto.png"))); // NOI18N
-        jPanel_Inicio.add(jLabel_LogoApp, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 150, 102));
+        jPanel_Inicio.add(jLabel_LogoApp, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 142, 150, 100));
 
         button_IngrVehiculo.setBackground(new java.awt.Color(0, 153, 153));
         button_IngrVehiculo.setFont(new java.awt.Font("Candara", 1, 16)); // NOI18N
@@ -115,10 +117,16 @@ public class InicioApp extends javax.swing.JFrame {
         button_Salir.addActionListener(this::button_SalirActionPerformed);
         jPanel_Inicio.add(button_Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, 140, 50));
 
-        jLabel_SubtituloApp.setFont(new java.awt.Font("Segoe UI Semibold", 2, 16)); // NOI18N
+        jLabel_SubtituloApp.setFont(new java.awt.Font("Segoe UI Semibold", 2, 17)); // NOI18N
         jLabel_SubtituloApp.setForeground(new java.awt.Color(51, 255, 255));
         jLabel_SubtituloApp.setText("App para control de estacionamiento");
-        jPanel_Inicio.add(jLabel_SubtituloApp, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, -1, -1));
+        jPanel_Inicio.add(jLabel_SubtituloApp, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
+
+        jButton1.setBackground(new java.awt.Color(255, 255, 51));
+        jButton1.setFont(new java.awt.Font("Montserrat", 1, 16)); // NOI18N
+        jButton1.setText("Opciones");
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel_Inicio.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 140, 40));
 
         getContentPane().add(jPanel_Inicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 340, 480));
 
@@ -126,7 +134,7 @@ public class InicioApp extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void button_IngrVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_IngrVehiculoActionPerformed
-        setSize(800, 450);
+        setSize(975, 480);
         panel_IngresarVehiculo.setVisible(true);
         panel_RetirarVehiculo.setVisible(false);
         panel_ListaVehiculos.setVisible(false);
@@ -136,7 +144,7 @@ public class InicioApp extends javax.swing.JFrame {
     }//GEN-LAST:event_button_IngrVehiculoActionPerformed
 
     private void button_RetVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_RetVehiculoActionPerformed
-        setSize(800, 450);
+        setSize(975, 480);
         panel_IngresarVehiculo.setVisible(false);
         panel_RetirarVehiculo.setVisible(true);
         panel_ListaVehiculos.setVisible(false);
@@ -146,7 +154,7 @@ public class InicioApp extends javax.swing.JFrame {
     }//GEN-LAST:event_button_RetVehiculoActionPerformed
 
     private void button_ListVehiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_ListVehiculosActionPerformed
-        setSize(1116, 450);
+        setSize(975, 480);
         add(panel_ListaVehiculos);
         panel_IngresarVehiculo.setVisible(false);
         panel_RetirarVehiculo.setVisible(false);
@@ -191,6 +199,7 @@ public class InicioApp extends javax.swing.JFrame {
     private java.awt.Button button_ListVehiculos;
     private java.awt.Button button_RetVehiculo;
     private java.awt.Button button_Salir;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel_LogoApp;
     private javax.swing.JLabel jLabel_NombreApp;
     private javax.swing.JLabel jLabel_SubtituloApp;

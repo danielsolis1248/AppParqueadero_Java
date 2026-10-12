@@ -33,6 +33,7 @@ public class Panel_ListaVehiculos extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
@@ -46,26 +47,28 @@ public class Panel_ListaVehiculos extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
-        setMinimumSize(new java.awt.Dimension(700, 550));
-        setPreferredSize(new java.awt.Dimension(700, 550));
+        setMaximumSize(new java.awt.Dimension(620, 480));
+        setMinimumSize(new java.awt.Dimension(620, 480));
+        setPreferredSize(new java.awt.Dimension(620, 480));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 83, 103));
         jLabel3.setText("Fecha:");
         jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 60, 60, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 60, 60, -1));
 
         jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jTextField2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, 130, -1));
+        add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 90, 130, -1));
 
+        button1.setActionCommand("Buscar ");
         button1.setBackground(new java.awt.Color(15, 102, 126));
-        button1.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
+        button1.setFont(new java.awt.Font("Candara", 1, 20)); // NOI18N
         button1.setForeground(new java.awt.Color(255, 255, 255));
-        button1.setLabel("Registrar");
+        button1.setLabel("Buscar");
         button1.addActionListener(this::button1ActionPerformed);
-        add(button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 490, 120, 40));
+        add(button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 420, 90, 40));
 
         jPanel1.setBackground(new java.awt.Color(0, 83, 103));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -77,67 +80,70 @@ public class Panel_ListaVehiculos extends javax.swing.JPanel {
 
         jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Buscar vehiculos");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, -1, 30));
+        jLabel5.setText("Lista de vehiculos");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, -1, 30));
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 50));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/appparqueadero/Imagenes/Logo_lista.png"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 14, 25, 25));
+
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 50));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 83, 103));
         jLabel4.setText("Tipo de vehiculo:");
         jLabel4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 160, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 160, -1));
 
         jTextField3.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         jTextField3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 140, -1));
+        add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 140, -1));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 83, 103));
         jLabel6.setText("Propietario:");
         jLabel6.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 60, 110, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 60, 110, -1));
 
         jTextField4.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jTextField4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jTextField4.setMinimumSize(new java.awt.Dimension(700, 500));
-        add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 150, -1));
+        add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 90, 150, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 83, 103));
         jLabel7.setText("Placa:");
         jLabel7.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, 50, -1));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 50, -1));
 
         jRadioButton2.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
         jRadioButton2.setForeground(new java.awt.Color(0, 102, 102));
         jRadioButton2.setText("Auto");
         jRadioButton2.addActionListener(this::jRadioButton2ActionPerformed);
-        add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, -1, 20));
+        add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, -1, 20));
 
         jRadioButton3.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
         jRadioButton3.setForeground(new java.awt.Color(0, 102, 102));
         jRadioButton3.setText("Motocicleta");
         jRadioButton3.addActionListener(this::jRadioButton3ActionPerformed);
-        add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 120, 20));
+        add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, 120, 20));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 83, 103));
         jLabel8.setText("Ubicación del vehiculo:");
         jLabel8.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 130, 200, -1));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 130, 200, -1));
 
         jRadioButton4.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
         jRadioButton4.setForeground(new java.awt.Color(0, 102, 102));
         jRadioButton4.setText("Dentro");
         jRadioButton4.addActionListener(this::jRadioButton4ActionPerformed);
-        add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, 90, 20));
+        add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, 90, 20));
 
         jRadioButton5.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
         jRadioButton5.setForeground(new java.awt.Color(0, 102, 102));
         jRadioButton5.setText("Fuera");
         jRadioButton5.addActionListener(this::jRadioButton5ActionPerformed);
-        add(jRadioButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 160, 80, 20));
+        add(jRadioButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 160, 80, 20));
 
         jTable1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -163,7 +169,7 @@ public class Panel_ListaVehiculos extends javax.swing.JPanel {
             jTable1.getColumnModel().getColumn(6).setHeaderValue("Pago");
         }
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 660, 200));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 580, 200));
     }// </editor-fold>//GEN-END:initComponents
 
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
@@ -191,6 +197,7 @@ public class Panel_ListaVehiculos extends javax.swing.JPanel {
     private java.awt.Button button1;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
